@@ -1,0 +1,27 @@
+body {
+	text-align: center;
+	background-image: url(https://st5.depositphotos.com/9012638/65008/i/450/depositphotos_650082930-stock-photo-happy-birthday-greeting-card-background.jpg);
+      background-size: cover;
+	font-family: DM Serif Text;
+}
+
+div {
+	padding: 50px;
+	margin: 6%;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 15px;
+}
+
+
+.container {
+      max-width: 1000px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 100px;
+      border-radius: 15px;
+}
+
+h1 {
+	text-align: center;
+	color: skyblue;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>JS EVENTS</title>
+</head>
+<body>
+	<div class="container mt-5">
+		<h1>GREETING APP</h1>
+		<hr>
+			<details ontoggle="alert('The ontoggle event just got triggered')">
+				<summary>
+					INSTRUCTIONS
+				</summary>
+					<p>
+						Enter your name
+					</p>
+			</details>
+
+		<form>
+			<label for="fname">Enter Name:</label>
+			<input type="text" id="fname" class="form-control">
+
+			<h5 id="guest-name">Welcome Guest!</h5>
+			<button type="button" class="btn btn-info" onclick="greet()">Greet</button>
+			<button type="button" class="btn btn-info" onclick="window.location.reload()"; id="refresh" onmouseover="changeTextColor()" onmouseout="resetTextColor()">Refresh</button>
+		</form>
+
+		<script type="text/javascript">
+			function greet() {
+				var name = document.getElementById('fname').value;
+
+				document.getElementById('guest-name').innerHTML = 'Welcome, ' + name;
+
+			}
+
+			document.getElementById('fname').onchange = function() {changename()};
+
+			function changename() {
+                var fname = document.getElementById('fname');
+                fname.value = fname.value.toUpperCase();
+            }
+
+			const reload = document.getElementById('refresh');
+
+			function changeTextColor(){
+				reload.style.color = "skyblue";
+				reload.style.background = "white";
+			}
+
+			function resetTextColor(){
+				reload.style.color = "white";
+				reload.style.background = "skyblue";
+			}
+
+		</script>
+
+		<footer>
+			<hr><p> &#169; AY 2025 | ICT 9-RUBY | EXERISE 5: JS EVENTS| TARCISIUS JOHN C. CAÑETE</p>
+		</footer>
+	</div>
+	
+</body>
+</html>
